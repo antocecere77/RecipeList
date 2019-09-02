@@ -10,9 +10,9 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [
     // tslint:disable-next-line:max-line-length
-    new Recipe('A Test Recipe', 'This is a simply test', 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2015/11/shakshuka-11.jpg'),
+    new Recipe('A Test Recipe', 'This is a simply test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'),
     // tslint:disable-next-line:max-line-length
-    new Recipe('A Test Recipe', 'This is a simply test', 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2015/11/shakshuka-11.jpg')
+    new Recipe('A Test Recipe', 'This is a simply test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg')
   ];
 
   constructor() { }

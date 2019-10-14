@@ -15,4 +15,11 @@ export class DataStorageService {
                 console.log(response);
             });
     }
+
+    fetchRecipes() {
+        this.http.get<Recipe[]>('https://recipe-book-ecdb4.firebaseio.com/recipe.json')
+            .subscribe(recipes => {
+                this.recipeService.setRecipes(recipes);
+            });
+    }
 }

@@ -66,7 +66,7 @@ constructor(private http: HttpClient, private router: Router) {}
             email: string;
             id: string;
             _token: string;
-            _tokenExpirationDate: string;
+            _tokenExpirateDate: string;
           } = JSON.parse(localStorage.getItem('userData'));
           if (!userData) {
             return;
@@ -76,12 +76,12 @@ constructor(private http: HttpClient, private router: Router) {}
             userData.email,
             userData.id,
             userData._token,
-            new Date(userData._tokenExpirationDate)
+            new Date(userData._tokenExpirateDate)
           );
 
           if (loadedUser.token) {
             this.user.next(loadedUser);
-            const expirationDuration = new Date(userData._tokenExpirationDate).getDate() - new Date().getTime();
+            const expirationDuration = new Date(userData._tokenExpirateDate).getDate() - new Date().getTime();
             this.autoLogout(expirationDuration);
           }
     }
